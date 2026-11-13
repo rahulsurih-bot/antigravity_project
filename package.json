@@ -1,0 +1,33 @@
+{
+  "name": "agrismart-ai",
+  "version": "1.0.0",
+  "description": "AgriSmart AI - Intelligent Crop Advisory Assistant",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "start": "npm run start --workspace=server",
+    "server": "npm run dev --workspace=server",
+    "client": "npm run dev --workspace=client",
+    "dev": "concurrently \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "build": "npm run build --workspace=client && npm run build --workspace=server",
+    "test": "npm run test --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "keywords": [
+    "agriculture",
+    "ai-advisory",
+    "crop-recommendation",
+    "disease-detection",
+    "fertilizer-management",
+    "irrigation",
+    "gemini",
+    "supabase"
+  ],
+  "author": "AgriSmart AI Team",
+  "license": "MIT"
+}
